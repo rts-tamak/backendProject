@@ -3,11 +3,12 @@ import dotenv from "dotenv";
 import connectDB from "./db/index.js"
 import cors from "cors"
 import cookieParser from "cookie-parser";
+import express from "express";
 
 dotenv.config({
     path: "./env"
 })
-
+const app = express();
 
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
